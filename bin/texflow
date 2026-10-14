@@ -1,0 +1,37 @@
+#!/usr/bin/env -S gjs -m
+/**
+ * TeXFlow Launcher Script
+ */
+
+import system from 'system';
+import GLib from 'gi://GLib';
+import Gio from 'gi://Gio';
+
+// Resolve directory of current script, following symlinks if necessary
+let scriptPath = system.programInvocationName;
+try {
+    if (GLib.file_test(scriptPath, GLib.FileTest.IS_SYMLINK)) {
+        scriptPath = GLib.file_read_link(scriptPath) || scriptPath;
+    }
+} catch (e) {
+    // Keep scriptPath as-is if not a symlink
+}
+
+if (!GLib.path_is_absolute(scriptPath)) {
+    scriptPath = GLib.canonicalize_filename(scriptPath, GLib.get_current_dir());
+}
+
+let scriptDir = GLib.path_get_dirname(scriptPath);
+
+// Find src/main.js relative to script
+let mainPath = GLib.build_filenamev([scriptDir, 'src', 'main.js']);
+if (!GLib.file_test(mainPath, GLib.FileTest.EXISTS)) {
+    mainPath = GLib.build_filenamev([GLib.path_get_dirname(scriptDir), 'src', 'main.js']);
+}
+
+const mainUri = Gio.File.new_for_path(mainPath).get_uri();
+const { main } = await import(mainUri);
+
+const argv = [system.programInvocationName, ...system.programArgs];
+const exitCode = main(argv);
+system.exit(exitCode || 0);

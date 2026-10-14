@@ -1,0 +1,157 @@
+/* TeXFlow Custom CSS Styles */
+
+/* Live PDF Preview Page Card Styling */
+.pdf-page-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 2px;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.pdf-page-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.preview-container {
+    background-color: alpha(currentColor, 0.03);
+}
+
+.preview-toolbar {
+    background-color: alpha(currentColor, 0.02);
+    border-bottom: 1px solid alpha(currentColor, 0.08);
+}
+
+/* Quick Formatting Toolbar */
+.quick-toolbar-scroller {
+    border-bottom: 1px solid alpha(currentColor, 0.08);
+    background-color: alpha(currentColor, 0.015);
+}
+
+.quick-toolbar {
+    background-color: transparent;
+}
+
+.quick-toolbar button {
+    min-width: 28px;
+    min-height: 28px;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Status Bar */
+.editor-statusbar {
+    border-top: 1px solid alpha(currentColor, 0.08);
+    font-size: 11px;
+}
+
+/* Completion Popover Badges */
+.completion-badge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.badge-cmd {
+    background-color: #3584e4;
+    color: #ffffff;
+}
+
+.badge-env {
+    background-color: #9141ac;
+    color: #ffffff;
+}
+
+.badge-math {
+    background-color: #e66100;
+    color: #ffffff;
+}
+
+.badge-pkg {
+    background-color: #2ec27e;
+    color: #ffffff;
+}
+
+.badge-tex {
+    background-color: #008080;
+    color: #ffffff;
+}
+
+.completion-name {
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* Log Panel & Diagnostics */
+.log-panel {
+    border-top: 1px solid alpha(currentColor, 0.12);
+    background-color: alpha(currentColor, 0.02);
+}
+
+.line-badge {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: alpha(currentColor, 0.08);
+}
+
+.error-text {
+    color: #e01b24;
+    font-weight: 500;
+}
+
+.warning-text {
+    color: #e5a50a;
+}
+
+.error-icon {
+    color: #e01b24;
+}
+
+.warning-icon {
+    color: #e5a50a;
+}
+
+.badge-clean {
+    color: #2ec27e;
+    font-weight: 600;
+}
+
+.badge-error {
+    color: #e01b24;
+    font-weight: 600;
+}
+
+.badge-warning {
+    color: #e5a50a;
+    font-weight: 600;
+}
+
+.status-pill {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    background-color: alpha(currentColor, 0.08);
+}
+
+/* Source View Customization */
+.latex-code-view {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Autocompletion In-Window Overlay Card */
+.completion-overlay-card {
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+    border: 1px solid alpha(currentColor, 0.16);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
+    padding: 6px;
+}
+

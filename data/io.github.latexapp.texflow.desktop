@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=TeXFlow
+Comment=Modern LaTeX & PDFTeX Studio with Autosuggestions and Live Preview
+Exec=texflow %U
+Icon=io.github.latexapp.texflow
+Terminal=false
+Type=Application
+Categories=Office;Development;Publishing;TextEditor;
+MimeType=text/x-tex;text/x-latex;application/x-tex;application/x-latex;
+StartupNotify=true
+Actions=NewWindow;
+
+[Desktop Action NewWindow]
+Name=New Window
+Exec=texflow
+

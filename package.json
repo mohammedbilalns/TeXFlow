@@ -1,0 +1,26 @@
+{
+  "name": "texflow",
+  "version": "1.0.0",
+  "description": "Modern GTK4 & GJS LaTeX and PDFTeX Studio with Autosuggestions and Live Preview",
+  "main": "src/main.js",
+  "type": "module",
+  "bin": {
+    "texflow": "./bin/texflow"
+  },
+  "scripts": {
+    "start": "./bin/texflow",
+    "test": "gjs -m tests/run-all.js"
+  },
+  "keywords": [
+    "latex",
+    "pdftex",
+    "gtk4",
+    "libadwaita",
+    "gjs",
+    "gnome",
+    "live-preview",
+    "editor"
+  ],
+  "author": "TeXFlow Contributors",
+  "license": "MIT"
+}
